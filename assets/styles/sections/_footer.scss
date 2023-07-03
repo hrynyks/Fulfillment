@@ -1,0 +1,264 @@
+.footer {
+    padding: 35px 0 30px;
+    background-color: $dark-color;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #959595;
+        padding-bottom: 50px;
+
+        @include a (tablet-xl) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+
+    &__content {
+        margin-top: 25px;
+        max-width: 320px;
+        width: 100%;
+
+        @include a (laptop) {
+            max-width: 280px;
+        }
+
+        @include a (tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        &-link {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__descr {
+        font-size: 15px;
+        line-height: 20px;
+        color: #fff;
+        margin-bottom: 30px;
+
+        @include a (laptop) {
+            font-size: 13px;
+        }
+
+        @include a (tablet) {
+            text-align: center;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+
+        &-phone {
+            font-size: 16px;
+            line-height: 26px;
+            color: #fff;
+            padding-left: 32px;
+            position: relative;
+
+            @include a (laptop) {
+                font-size: 14px;
+            }
+
+            @include a (tablet-xl) {
+                font-size: 12px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(../../assets/images/footer-phone-icon.svg);
+                width: 20px;
+                height: 20px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-adress {
+            font-size: 16px;
+            line-height: 26px;
+            color: #fff;
+            padding-left: 32px;
+            position: relative;
+
+            @include a (laptop) {
+                font-size: 14px;
+            }
+
+            @include a (tablet-xl) {
+                font-size: 12px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(../../assets/images/footer-adress-icon.svg);
+                width: 20px;
+                height: 20px;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &-item {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $dark-color;
+            box-shadow: -6.22302px -6.22302px 18.6691px #3B4451, 6.22302px 6.22302px 18.6691px #000000;
+            border-radius: 24.8921px;
+
+            &:hover .footer__social-svg {
+                fill: $main-color;
+                transition: .5s all ease-in-out;
+            }
+        }
+
+        &-svg {
+            fill: #F4F6F8;
+        }
+    }
+
+    &__links {
+
+        &-wrap {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            align-items: flex-start;
+
+            @include a (tablet) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include a (mobile) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            color: #EFF1ED;
+            margin-bottom: 5px;
+
+            @include a (laptop) {
+                font-size: 16px;
+                line-height: 23px;
+            }
+
+            @include a (tablet-xl) {
+                font-size: 14px;
+                line-height: 19px;
+            }
+
+            @include a (tablet) {
+                font-size: 12px;
+                line-height: 17px;
+                text-align: center;
+            }
+
+            @include a (mobile) {
+                font-size: 10px;
+                line-height: 15px;
+            }
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        @include a (tablet) {
+            align-items: center;
+        }
+    }
+
+    &__item {
+        &-link {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 35px;
+            color: #7A899E;
+
+            &:hover {
+                color: $main-color;
+                transition: .5s all ease-in-out;
+            }
+
+            @include a (laptop) {
+                font-size: 12px;
+                line-height: 25px;
+            }
+
+            @include a (tablet) {
+                font-size: 10px;
+                line-height: 15px;
+            }
+        }
+    }
+
+    &__bot {
+        padding-top: 40px;
+        font-size: 14px;
+        line-height: 22px;
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+
+        @include a (tablet) {
+            font-size: 12px;
+        }
+
+        @include a (mobile) {
+            font-size: 10px;
+        }
+
+        &-descr {
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        &-copyright {
+            text-align: center;
+            color: #D7D7D7;
+
+            @include a (mobile) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &-link {
+            text-decoration-line: underline;
+            color: #D7D7D7;
+
+            &:hover {
+                color: $main-color;
+                transition: .5s all ease-in-out;
+            }
+        }
+    }
+}

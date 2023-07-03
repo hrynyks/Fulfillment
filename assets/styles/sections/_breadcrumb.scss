@@ -1,0 +1,56 @@
+.breadcrumb {
+    padding: 25px 0;
+    border-bottom: 1px solid #7A899E;
+
+    &__items li {
+        display: inline;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: #7A899E;
+    }
+
+    &__items li:last-child {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 51px;
+            height: 1px;
+            background-color: #7A899E;
+            bottom: 0;
+            left: 15px;
+        }
+    }
+
+    &__items a {
+        color: #7A899E;
+
+        &:hover {
+            color: $main-color
+        }
+    }
+
+    &__items li+li:before {
+        padding: 3px;
+        color: black;
+        content: "/\00a0";
+    }
+
+    &__items li:first-child {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(../../assets/images/breadcrumb-home-icon.svg);
+            width: 14px;
+            height: 17px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

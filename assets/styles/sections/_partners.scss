@@ -1,0 +1,45 @@
+.partners {
+    padding: 50px 0 70px;
+    background-color: rgba(244, 246, 248, 0.8);
+
+    &__title {
+        font-family: 'Nunito';
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 64px;
+        color: $dark-color;
+        text-align: center;
+        margin-bottom: 50px;
+
+        @include a (laptop) {
+            font-size: 56px;
+        }
+
+        @include a (tablet-xl) {
+            font-size: 50px;
+            line-height: 55px;
+        }
+
+        @include a (tablet) {
+            font-size: 35px;
+            line-height: 40px;
+        }
+
+        @include a (mobile) {
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+
+    &__images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+
+        @include a (tablet) {
+            flex-direction: column;
+        }
+    }
+
+}

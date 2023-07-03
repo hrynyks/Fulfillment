@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+	padding: 0 20px;
+
+    @include a (laptop) {
+        max-width: 95%;
+    }
+}
+
+#myBtn {
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    background-color: $main-color;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 80px;
+    height: 80px;
+    z-index: 20;
+
+    @include a (tablet-xl) {
+        scale: (0.9);
+        right: 75px;
+        bottom: 75px;
+    }
+
+    @include a (tablet) {
+        scale: (0.8);
+        right: 50px;
+        bottom: 50px;
+    }
+
+    @include a (mobile) {
+        scale: (0.7);
+        right: 25px;
+        bottom: 25px;
+    }
+}
+
+
+
+
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    border: none;
+}
+
+
+img {
+    max-width: 100%;
+}

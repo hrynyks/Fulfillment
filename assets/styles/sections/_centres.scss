@@ -1,0 +1,122 @@
+.centres {
+    padding: 50px 0 70px;
+
+    &__title {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 64px;
+        text-align: center;
+        color: $dark-color;
+        margin-bottom: 50px;
+
+        @include a (laptop) {
+            font-size: 50px;
+            line-height: 60px;
+        }
+
+        @include a (tablet-xl) {
+            font-size: 40px;
+            line-height: 50px;
+            margin-bottom: 35px;
+        }
+
+        @include a (tablet) {
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+
+        @include a (mobile) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+        gap: 100px;
+
+        @include a (laptop) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+        @include a (tablet-xl) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 50px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            color: $dark-color;
+            margin-bottom: 15px;
+
+            @include a (laptop) {
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+            @include a (tablet-xl) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            @include a (tablet) {
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            @include a (mobile) {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+
+        &-image {
+            margin-bottom: 24px;
+        }
+
+        &-btn {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            color: #F4F6F8;
+            background-color: $main-color;
+            padding: 17px 40px;
+            border-radius: 100px;
+            border: 2px solid transparent;
+
+            @include a (tablet-xl) {
+                font-size: 14px;
+            }
+
+            @include a (tablet) {
+                font-size: 13px;
+            }
+
+            @include a (mobile) {
+                font-size: 10px;
+            }
+
+            &:hover {
+                background-color: #F4F6F8;
+                color: $main-color;
+                border-color: $main-color;
+                transition: .5s all ease-in-out;
+            }
+        }
+    }
+}

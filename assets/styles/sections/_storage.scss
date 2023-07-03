@@ -1,0 +1,182 @@
+.storage {
+    padding: 70px 0;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    &__content {
+        max-width: 560px;
+        width: 100%;
+
+        @include a (laptop) {
+            max-width: 455px;
+        }
+
+        @include a (tablet-xl) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include a (tablet) {
+            max-width: 480px;
+        }
+    }
+
+    &__title {
+        font-family: 'Nunito';
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        color: $dark-color;
+        margin-bottom: 15px;
+
+        @include a (laptop) {
+            font-size: 28px;
+        }
+
+        @include a (tablet-xl) {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        @include a (tablet) {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        @include a (mobile) {
+            font-size: 16px;
+        }
+
+        &-sml {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 15px;
+
+            @include a (laptop) {
+                font-size: 16px;
+            }
+
+            @include a (tablet-xl) {
+                font-size: 14px;
+            }
+
+            @include a (tablet) {
+                font-size: 12px;
+            }
+
+            @include a (mobile) {
+                font-size: 10px;
+            }
+        }
+    }
+
+    &__descr {
+        font-size: 18px;
+        line-height: 26px;
+        color: $dark-color;
+        margin-bottom: 30px;
+
+        @include a (laptop) {
+            font-size: 16px;
+        }
+
+        @include a (tablet-xl) {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        @include a (tablet) {
+            font-size: 12px;
+        }
+
+        @include a (mobile) {
+            font-size: 10px;
+        }
+    }
+
+    &__location {
+        font-size: 18px;
+        line-height: 26px;
+        color: #000;
+        display: block;
+        margin-bottom: 15px;
+        padding-left: 40px;
+        position: relative;
+
+        @include a (laptop) {
+            font-size: 16px;
+        }
+
+        @include a (tablet-xl) {
+            font-size: 14px;
+        }
+
+        @include a (tablet) {
+            font-size: 12px;
+        }
+
+        @include a (mobile) {
+            font-size: 10px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(../../assets/images/storage-location-icon.svg);
+            width: 30px;
+            height: 30px;
+            left: 0;
+        }
+    }
+
+    &__time {
+        font-size: 18px;
+        line-height: 26px;
+        color: #000;
+        padding-left: 40px;
+        position: relative;
+
+        @include a (laptop) {
+            font-size: 16px;
+        }
+
+        @include a (tablet-xl) {
+            font-size: 14px;
+        }
+
+        @include a (tablet) {
+            font-size: 12px;
+        }
+
+        @include a (mobile) {
+            font-size: 10px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(../../assets/images/storage-time-icon.svg);
+            width: 30px;
+            height: 30px;
+            left: 0;
+        }
+
+        &-title {
+            font-weight: 700;
+        }
+    }
+
+
+}

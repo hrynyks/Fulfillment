@@ -1,0 +1,169 @@
+.logistic {
+    padding: 50px 0 70px;
+
+    &__title {
+        font-family: 'Nunito';
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        color: $dark-color;
+        margin-bottom: 20px;
+        text-align: center;
+
+        @include a (tablet-xl) {
+            font-size: 40px;
+        }
+
+        @include a (tablet) {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        @include a (mobile) {
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        &-sml {
+            font-family: 'Nunito';
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 44px;
+            color: $dark-color;
+            margin-bottom: 15px;
+
+            @include a (tablet-xl) {
+                text-align: center;
+                font-size: 24px;
+                line-height: 36px;
+            }
+
+            @include a (tablet) {
+                font-size: 20px;
+                line-height: 28px;
+            }
+
+            @include a (mobile) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 560px;
+        width: 100%;
+
+        @include a (laptop) {
+            max-width: 400px;
+        }
+
+        &-wrap {
+            display: flex;
+            justify-content: flex-start;
+            gap: 40px;
+
+
+            @include a (laptop) {
+                align-items: center;
+                justify-content: space-around;
+                gap: 20px;
+            }
+
+            @include a (tablet-xl) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__descr {
+        font-size: 18px;
+        line-height: 26px;
+        color: $dark-color;
+        margin-bottom: 20px;
+
+        &-last {
+            margin-bottom: 50px;
+        }
+
+        @include a (tablet-xl) {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        @include a (tablet) {
+            font-size: 13px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        color: $dark-color;
+        padding-left: 30px;
+        position: relative;
+
+        @include a (tablet-xl) {
+            font-size: 16px;
+        }
+
+        @include a (tablet) {
+            font-size: 14px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: $main-color;
+            left: 0;
+            top: 5px;
+        }
+
+
+        &-span {
+            font-weight: 400;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @include a (mobile) {
+            flex-direction: column;
+        }
+    }
+
+    &__btn {
+        width: 264px;
+        height: 50px;
+        border-radius: 100px;
+        background-color: $dark-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        line-height: 16px;
+        color: #F4F6F8;
+
+        @include a (laptop) {
+            font-size: 14px;
+        }
+
+        &:hover {
+            background-color: $main-color;
+            transition: .5s all ease-in-out;
+        }
+    }
+}

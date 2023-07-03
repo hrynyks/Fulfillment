@@ -1,0 +1,166 @@
+.services {
+    padding: 50px 0 70px;
+
+    &__title {
+        font-family: 'Nunito';
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 64px;
+        color: $dark-color;
+        text-align: center;
+        margin-bottom: 5px;
+
+        @include a (laptop) {
+            font-size: 55px;
+        }
+
+        @include a (tablet-xl) {
+            font-size: 45px;
+        }
+
+        @include a (tablet) {
+            font-size: 35px;
+        }
+
+        @include a (mobile) {
+            font-size: 28px;
+        }
+
+    }
+
+    &__subtitle {
+        font-family: 'Nunito';
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 40px;
+        color: $dark-color;
+        display: block;
+        text-align: center;
+        margin-bottom: 70px;
+
+        @include a (laptop) {
+            font-size: 30px;
+        }
+
+        @include a (tablet-xl) {
+            font-size: 26px;
+        }
+
+        @include a (tablet) {
+            font-size: 22px;
+        }
+
+        @include a (mobile) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+        gap: 43px;
+
+        @include a (laptop) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include a (tablet) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 30px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        z-index: 1;
+        position: relative;
+
+        @include a (tablet-xl) {
+            gap: 15px;
+        }
+
+        @include a (tablet) {
+            gap: 10px;
+        }
+
+        &-img {
+            width: 100px;
+            height: 100px;
+            background-color: $main-color;
+            border: 6px solid #FFFFFF;
+            border-radius: 50%;
+
+            @include a (tablet) {
+                width: 85px;
+                height: 85px;
+            }
+
+            @include a (mobile) {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 40px;
+            color: #000;
+            text-align: center;
+
+            @include a (laptop) {
+                font-size: 24px;
+            }
+        }
+
+        &-link {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: $main-color;
+            display: block;
+            padding-right: 12px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 80px;
+                height: 2px;
+                bottom: -5px;
+                background-color: $main-color;
+                display: none;
+            }
+
+            &:hover {
+                &::before {
+                    display: block;
+                    transition: .5 all ease-in-out;
+
+                }
+            }
+
+            @include a (laptop) {
+                font-size: 14px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(../../assets/images/services-arrow-icon.svg);
+                width: 9px;
+                height: 14px;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+
+}
